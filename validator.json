@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "required": [
+        "_id",
+        "_rev",
+        "projects"
+    ],
+    "properties": {
+        "_id": {
+            "type": "string"
+        },
+        "_rev": {
+            "type": "string"
+        },
+        "projects": {
+            "type": "array",
+            "required": [
+                "projectId",
+                "billing",
+                "language",
+                "customer",
+                "name"
+            ],
+            "properties": {
+                "projectId": {
+                    "type": "integer"
+                },
+                "billing": {
+                    "type": "boolean"
+                },
+                "language": {
+                    "type": "string",
+                    "enum": [
+                        "lt",
+                        "en"
+                    ]
+                },
+                "customer": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        }
+
+        }
+
+        
+    
+}
